@@ -19,6 +19,10 @@ app.get('/chai',(req,res)=>{
     res.send("<h2>Chai Aur Code</h2>")
 })
 
+app.get('/web',(req,res)=>{
+    res.send("./index.html")
+})
+
 app.listen(PORT,()=>{
     console.log(`Server listining at ${PORT}`);
 })
