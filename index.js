@@ -4,7 +4,7 @@ const path = require('path')
 const app = express()
 const PORT = process.env.PORT || 4000
 
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname)))
 
 app.get('/',(req,res)=>{
     res.send("Welcome to my first api");
@@ -23,7 +23,7 @@ app.get('/chai',(req,res)=>{
 })
 
 app.get('/web',(req,res)=>{
-    res.sendFile(path.join(__dirname, 'public', 'index.html'))
+    res.sendFile(path.join(__dirname, 'index.html'))
 })
 
 app.listen(PORT,()=>{
